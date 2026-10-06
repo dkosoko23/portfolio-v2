@@ -1,5 +1,21 @@
 # Validation
 
+## Sidebar, dates, and skills refinement — October 6, 2026
+
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- Parsed all nine generated content pages: project/review/experience dates,
+  slideshow controls, and the removed italic sidebar sentence are absent.
+  All four statistic values remain present on every page.
+- The generated homepage retains six linked project cards with no pause
+  buttons. The About page includes React, Next.js, and Go in its skills list.
+- Source checks confirm an off-white sidebar (`#f7f7f5`), white main content,
+  dark navigation/contact styling, and purple statistic values.
+- The local About route returned HTTP 200 with the new skills and without the
+  removed sidebar sentence.
+- Browser connection retry still failed on the missing cached service module;
+  no fresh visual, responsive, or animation interaction checks are claimed.
+- No deployment was performed.
+
 ## Image-led case studies and white theme — October 6, 2026
 
 - `bun run typecheck` and `bun run generate`: passed. The same unused-import

@@ -3,7 +3,6 @@ import type { Project } from '~/data/portfolio';
 
 const props = defineProps<{ project: Project; priority?: boolean }>();
 const activeIndex = ref(0);
-const paused = ref(false);
 const card = ref<HTMLElement>();
 let timer: ReturnType<typeof setInterval> | undefined;
 let observer: IntersectionObserver | undefined;
@@ -18,7 +17,7 @@ const stop = () => {
 
 const start = () => {
   stop();
-  if (!visible || paused.value || reducedMotion || document.hidden || props.project.preview.length < 2) return;
+  if (!visible || reducedMotion || document.hidden || props.project.preview.length < 2) return;
   timer = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % props.project.preview.length;
   }, 6500);
@@ -28,8 +27,6 @@ const syncMotion = () => {
   reducedMotion = motionQuery?.matches ?? false;
   start();
 };
-
-watch(paused, start);
 
 onMounted(() => {
   motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -62,12 +59,8 @@ onBeforeUnmount(() => {
       <div class="card-scrim" />
       <div class="card-caption">
         <h2>{{ project.title }}</h2>
-        <time :datetime="project.published">{{ project.date }}</time>
       </div>
       <span class="view-project">View project <SmallIcon name="arrow" /></span>
     </NuxtLink>
-    <button v-if="project.preview.length > 1" class="slideshow-control" type="button" :aria-label="`${paused ? 'Play' : 'Pause'} ${project.title} preview`" :aria-pressed="paused" @click="paused = !paused">
-      <SmallIcon :name="paused ? 'play' : 'pause'" />
-    </button>
   </article>
 </template>

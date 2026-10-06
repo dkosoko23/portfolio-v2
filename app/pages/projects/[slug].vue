@@ -65,7 +65,7 @@ useSeoMeta({
         <NuxtLink to="/#work" class="back-link"><SmallIcon name="back" />All work</NuxtLink>
       </div>
       <div class="reading-content">
-        <p class="eyebrow mb-4">Project case study · {{ project.date }}</p>
+        <p class="eyebrow mb-4">Project case study</p>
         <h2>{{ project.title }}</h2>
       </div>
     </header>

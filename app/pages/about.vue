@@ -48,14 +48,13 @@ const services = [
 
       <section id="stack" class="section-rule" aria-labelledby="stack-heading">
         <h3 id="stack-heading">Tools I work with</h3>
-        <p class="mt-4">Vue · Nuxt · TypeScript · JavaScript · Node.js · PostgreSQL · REST APIs · Tailwind CSS · Python · Figma</p>
+        <p class="mt-4">Vue · Nuxt · React · Next.js · TypeScript · JavaScript · Node.js · Go · PostgreSQL · REST APIs · Tailwind CSS · Python · Figma</p>
       </section>
 
       <section class="section-rule" aria-labelledby="experience-heading">
         <h3 id="experience-heading">Experience</h3>
         <div class="mt-5 flex flex-wrap justify-between gap-2">
           <strong class="font-medium">Designer &amp; Project Manager · GiG Software Systems</strong>
-          <span class="text-xs text-[#726f7c]">Dec 2016 – May 2022</span>
         </div>
         <p class="mt-3">Led the design and development of web projects and coordinated developers across a range of client engagements.</p>
       </section>

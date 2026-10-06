@@ -2,8 +2,10 @@
 
 A Nuxt 4 + Vue 3 + TypeScript + Tailwind CSS 4 portfolio. Uses the sidebar,
 spacing, typography, and responsive layout of the requested Reid Slaughter
-reference with Adebowale’s Upwork portfolio content, white surfaces, and purple
-accents. Preview images fill their cards with top-aligned cropping.
+reference with Adebowale’s Upwork portfolio content, white main content, a soft
+off-white sidebar, dark navigation, and purple statistics. Preview images fill
+their cards with top-aligned cropping. Project, review, and experience dates
+are hidden from the presentation.
 
 ## Run
 
@@ -30,7 +32,7 @@ hosting provider.
 - `app/data/portfolio.ts`: profile, project descriptions, technical sections and their image indices, ordering, slides, and feedback.
 - `app/data/images.json`: image metadata and original Upwork asset URLs.
 - `app/assets/css/main.css`: shared layout, visual styling, and responsive rules.
-- `app/components/ProjectCard.vue`: visible-only rotating previews, pause, and reduced motion.
+- `app/components/ProjectCard.vue`: visible-only rotating previews with hover/focus and reduced-motion handling.
 - `app/pages/projects/[slug].vue`: case studies and native dialog image viewer.
 - `public/images`: optimized WebP portfolio images and profile portrait.
 

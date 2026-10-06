@@ -16,9 +16,8 @@ useSeoMeta({
       <p class="lead mt-7">A few words from the people I’ve worked with.</p>
       <div class="mt-10 flex flex-col">
         <figure v-for="review in reviews" :key="review.project" class="border-t border-[#dbdadf] py-8">
-          <div class="mb-5 flex items-center justify-between gap-4 text-xs text-[#726f7c]">
+          <div class="mb-5 text-xs">
             <span :aria-label="`${review.rating} out of 5 stars`" class="tracking-widest text-accent">★★★★★ <span class="ml-2 tracking-normal">{{ review.rating }}</span></span>
-            <span>{{ review.date }}</span>
           </div>
           <blockquote class="max-w-[38ch] text-[clamp(20px,2vw,28px)] leading-relaxed tracking-tight">“{{ review.quote }}”</blockquote>
           <figcaption class="mt-6 text-xs text-[#5c5965]">{{ review.project }} · Upwork client</figcaption>
