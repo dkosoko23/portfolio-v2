@@ -51,7 +51,7 @@ useSeoMeta({
 <template>
   <main id="main-content" class="reading case-study" tabindex="-1">
     <nav class="case-study-back" aria-label="Project navigation">
-      <NuxtLink to="/#work" class="case-study-back-link shadow-xl"><SmallIcon name="back" />All work</NuxtLink>
+      <NuxtLink to="/#work" class="case-study-back-link"><SmallIcon name="back" />All work</NuxtLink>
     </nav>
     <header class="case-study-hero">
       <img

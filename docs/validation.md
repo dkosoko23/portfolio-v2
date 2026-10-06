@@ -1,5 +1,26 @@
 # Validation
 
+## Neutral overlays, natural titles, and soft shadow — October 6, 2026
+
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- Hero and card gradients now use only black with varying opacity. Browser
+  inspection confirms the hero gradient has zero red, green, and blue channels.
+- Hero titles use normal wrapping. At 1280×720, “Healthcare Provider Discovery”
+  occupies the first line and “Platform” occupies the second.
+- Replaced `shadow-xl` with a centered 16px blur at 10% black plus a light
+  2px-offset shadow. Visually checked it over the white case-study body.
+- The image preview uses a transparent dialog over a 40% black backdrop with
+  12px blur. Images keep their intrinsic aspect ratio so their clickable bounds
+  match the visible image instead of covering the empty space beside it.
+- At desktop 1280×720 and mobile 390×844, clicking the overlay closes the
+  preview and restores page scrolling. Desktop checks also confirm clicking
+  the image keeps it open and dismissal returns focus to the opening button.
+- Mobile image bounds stay inside the viewport with no horizontal overflow.
+  No captured browser warnings or errors; the viewport override was reset.
+- Screenshots under ignored `.data/verification/`: `neutral-hero-natural-wrap.png`,
+  `soft-back-shadow.png`, and `black-blurred-image-preview.png`.
+- No deployment was performed.
+
 ## Back pill and header spacing — October 6, 2026
 
 - `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
