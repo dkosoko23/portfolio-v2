@@ -8,9 +8,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Adebowale O. | Full-Stack Developer & Product Designer',
+      title: 'Adebowale O. | Full-Stack Developer · SaaS & Web Apps',
       meta: [
-        { name: 'description', content: 'Full-stack development and product design by Adebowale O. Explore healthcare platforms, SaaS interfaces, and responsive websites.' },
+        { name: 'description', content: 'Full-stack development by Adebowale O. Explore web applications, APIs, PostgreSQL/PostGIS search, payment integrations, and responsive frontends.' },
         { name: 'theme-color', content: '#f8f6f0' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],

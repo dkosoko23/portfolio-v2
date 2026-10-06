@@ -45,17 +45,30 @@ useSeoMeta({
   <main id="main-content" class="reading" tabindex="-1">
     <div class="reading-content">
       <NuxtLink to="/#work" class="back-link"><SmallIcon name="back" />All work</NuxtLink>
-      <p class="eyebrow mb-4">Selected project · {{ project.date }}</p>
+      <p class="eyebrow mb-4">Project case study · {{ project.date }}</p>
       <h2>{{ project.title }}</h2>
       <p class="lead mt-7">{{ project.summary }}</p>
       <dl class="detail-meta">
         <div><dt class="eyebrow mb-2">My role</dt><dd>{{ project.role }}</dd></div>
-        <div><dt class="eyebrow mb-2">Areas &amp; tools</dt><dd>{{ project.skills.join(' · ') }}</dd></div>
+        <div><dt class="eyebrow mb-2">Technical focus</dt><dd>{{ project.skills.join(' · ') }}</dd></div>
       </dl>
       <div class="space-y-4"><p v-for="paragraph in project.description" :key="paragraph">{{ paragraph }}</p></div>
       <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
         <a :href="project.source" class="text-link inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">View on Upwork <SmallIcon name="arrow" /></a>
         <a v-if="project.website" :href="project.website.url" class="text-link inline-flex items-center gap-2" target="_blank" rel="noopener noreferrer">{{ project.website.label }} <SmallIcon name="arrow" /></a>
+      </div>
+      <div v-if="project.technicalSections.length" class="technical-sections">
+        <section
+          v-for="(section, index) in project.technicalSections"
+          :key="section.title"
+          class="section-rule"
+          :aria-labelledby="`technical-section-${index}`"
+        >
+          <h3 :id="`technical-section-${index}`">{{ section.title }}</h3>
+          <div class="mt-4 space-y-4">
+            <p v-for="paragraph in section.paragraphs" :key="paragraph">{{ paragraph }}</p>
+          </div>
+        </section>
       </div>
       <section class="project-gallery" aria-label="Project gallery">
         <button v-for="(image, index) in project.images" :key="image.src" type="button" class="gallery-image" :aria-label="`Enlarge ${image.alt}`" @click="openImage(image, $event)">

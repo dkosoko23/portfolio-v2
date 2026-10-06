@@ -2,8 +2,8 @@
 import { projects } from '~/data/portfolio';
 
 useSeoMeta({
-  title: 'Adebowale O. | Full-Stack Developer & Product Designer',
-  description: 'Selected product design and development work by Adebowale O.: healthcare platforms, SaaS dashboards, and responsive websites.',
+  title: 'Adebowale O. | Full-Stack Developer · SaaS & Web Apps',
+  description: 'Full-stack development by Adebowale O. Explore web applications, APIs, PostgreSQL/PostGIS search, payment integrations, and responsive frontends.',
 });
 </script>
 

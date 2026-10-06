@@ -26,15 +26,16 @@ hosting provider.
 
 ## Edit
 
-- `app/data/portfolio.ts`: profile, project descriptions, ordering, slides, and feedback.
+- `app/data/portfolio.ts`: profile, project descriptions, technical sections, ordering, slides, and feedback.
 - `app/data/images.json`: image metadata and original Upwork asset URLs.
 - `app/assets/css/main.css`: shared layout, visual styling, and responsive rules.
 - `app/components/ProjectCard.vue`: visible-only rotating previews, pause, and reduced motion.
 - `app/pages/projects/[slug].vue`: case studies and native dialog image viewer.
 - `public/images`: optimized WebP portfolio images and profile portrait.
 
-The work index contains six projects. Each has a local case study and image
-gallery. About and Client Words replace the corresponding personal content from
+The work index contains six projects. Each has a developer-focused case study,
+technical breakdown, and image gallery. The profile and About page lead with
+full-stack development. About and Client Words replace the personal content from
 the reference. Contact links go to the verified Upwork profile because no direct
 email address was supplied.
 

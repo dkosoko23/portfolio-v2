@@ -1,5 +1,24 @@
 # Validation
 
+## Full-stack case studies — October 6, 2026
+
+- `bun run typecheck`: passed.
+- `bun run generate`: passed; all nine content pages generated. Nuxt emitted
+  an unused-import warning from its internal `h3.mjs` dependency.
+- Parsed all nine generated HTML pages: titles and descriptions are present,
+  local links and image files resolve, fragment targets exist, and IDs are unique.
+- All six project pages contain the updated developer role, technical focus,
+  and at least three technical sections (19 sections total).
+- The local provider-platform route returned HTTP 200 and the updated title
+  and four technical sections.
+- Fresh browser visual and interaction checks were unavailable: the browser
+  connection failed while loading a missing cached plugin service module,
+  including after a session reset. The earlier browser checks below were not
+  repeated for this content update.
+- No deployment was performed.
+
+## Original portfolio build
+
 Verified locally on October 2, 2026.
 
 - `bun run typecheck`: passed.

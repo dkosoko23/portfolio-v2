@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
             <NuxtLink to="/" class="identity" aria-label="Adebowale O. home">
               <h1 class="name">Adebowale O.</h1>
             </NuxtLink>
-            <p class="role">Full-Stack Developer &amp; Product Designer</p>
+            <p class="role">Full-Stack Developer · SaaS &amp; Web Apps</p>
             <ul class="metrics">
               <li><strong class="metric-number">8+</strong> years building and improving digital products</li>
               <li><strong class="metric-number">100%</strong> job success on Upwork</li>
@@ -32,10 +32,10 @@ const year = new Date().getFullYear();
 
           <div class="bio">
             <h2 class="eyebrow">Who am I?</h2>
-            <p>I design and build web applications, SaaS products, and the interfaces people use to do their jobs.</p>
-            <p class="italic">From the first wireframe to the final implementation, I connect product thinking with hands-on engineering.</p>
+            <p>I build web applications across the frontend, backend, and database: SaaS products, search platforms, dashboards, and integrations.</p>
+            <p class="italic">Vue and Nuxt on the frontend. Node.js, PostgreSQL, and APIs behind the experience.</p>
             <p>Based in Frisco, Texas. Working with clients everywhere.</p>
-            <p><strong>Areas:</strong> <NuxtLink to="/about">Product Design</NuxtLink> · <NuxtLink to="/projects/provider-platform">Full-Stack Development</NuxtLink> · <NuxtLink to="/projects/healthcare-dashboard">UI/UX</NuxtLink> · <NuxtLink to="/about#stack">Vue &amp; Nuxt</NuxtLink></p>
+            <p><strong>Areas:</strong> <NuxtLink to="/projects/provider-platform">Full-Stack Development</NuxtLink> · <NuxtLink to="/about#stack">APIs &amp; Databases</NuxtLink> · <NuxtLink to="/projects/bookstore">Integrations</NuxtLink> · <NuxtLink to="/about#stack">Vue &amp; Nuxt</NuxtLink></p>
             <p class="font-medium">Have a product to build or improve? <a :href="profile.upwork" target="_blank" rel="noopener noreferrer">Let’s talk.</a></p>
           </div>
         </aside>
