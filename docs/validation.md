@@ -1,5 +1,18 @@
 # Validation
 
+## Restore the profile on the mobile homepage — October 6, 2026
+
+- Corrected the previous mobile rule: the homepage now shows the profile,
+  statistics, navigation, and bio above the project grid. Interior pages keep
+  the profile hidden on mobile. The homepage hides duplicate footer navigation.
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- At 390×844, the homepage profile starts at y=0 in normal document flow.
+  Opening the provider project hides it and places the project hero at y=0.
+  Neither route has horizontal overflow. Desktop sidebar visibility returns
+  after resetting the viewport override; no captured browser warnings/errors.
+- Screenshot: ignored `.data/verification/mobile-home-profile-restored.png`.
+- No deployment was performed.
+
 ## Remove the mobile profile header — October 6, 2026
 
 - `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.

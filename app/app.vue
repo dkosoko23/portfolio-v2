@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 <template>
   <div class="portfolio-shell">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" :class="{ 'is-home': route.path === '/' }">
       <div class="sidebar-wrap">
         <aside class="sidebar" aria-label="About Adebowale">
           <div>
