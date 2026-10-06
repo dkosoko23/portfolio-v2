@@ -1,5 +1,21 @@
 # Validation
 
+## Remove the mobile profile header — October 6, 2026
+
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- The shared profile/sidebar is hidden at the existing 900px mobile breakpoint.
+  Work, About, and Client Words remain accessible through compact footer links.
+- At 390×844, the provider case-study hero starts at viewport y=0 and the back
+  pill sits at y=16. The profile block is absent from the accessibility tree,
+  and the page has no horizontal overflow.
+- Clicking All work opens the mobile project grid immediately; clicking the
+  About footer link successfully opens the About page.
+- At 1280×720, the sidebar and its 1px divider remain visible, while the mobile
+  footer navigation is hidden. No horizontal overflow or captured browser
+  warnings/errors. The viewport override was reset.
+- Screenshot: ignored `.data/verification/mobile-project-no-profile-header.png`.
+- No deployment was performed.
+
 ## Neutral overlays, natural titles, and soft shadow — October 6, 2026
 
 - `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.

@@ -42,6 +42,11 @@ const year = new Date().getFullYear();
       <NuxtPage />
 
       <footer class="site-footer">
+        <nav class="mobile-footer-nav" aria-label="Main navigation">
+          <NuxtLink to="/#work" :aria-current="route.path === '/' || route.path.startsWith('/projects/') ? 'page' : undefined">Work</NuxtLink>
+          <NuxtLink to="/about" :aria-current="route.path === '/about' ? 'page' : undefined">About</NuxtLink>
+          <NuxtLink to="/reviews" :aria-current="route.path === '/reviews' ? 'page' : undefined">Client Words</NuxtLink>
+        </nav>
         <p>Client work remains the property of its owners.</p>
         <p>© {{ year }} Adebowale O.</p>
         <a :href="profile.upwork" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5">Upwork <SmallIcon name="arrow" /></a>
