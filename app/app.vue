@@ -34,7 +34,6 @@ const year = new Date().getFullYear();
             <h2 class="eyebrow">Who am I?</h2>
             <p>I build web applications across the frontend, backend, and database: SaaS products, search platforms, dashboards, and integrations.</p>
             <p>Based in Frisco, Texas. Working with clients everywhere.</p>
-            <p><strong>Areas:</strong> <NuxtLink to="/projects/provider-platform">Full-Stack Development</NuxtLink> · <NuxtLink to="/about#stack">APIs &amp; Databases</NuxtLink> · <NuxtLink to="/projects/bookstore">Integrations</NuxtLink> · <NuxtLink to="/about#stack">Vue &amp; Nuxt</NuxtLink></p>
             <p class="font-medium">Have a product to build or improve? <a :href="profile.upwork" target="_blank" rel="noopener noreferrer">Let’s talk.</a></p>
           </div>
         </aside>

@@ -22,6 +22,10 @@ contact action use their original dark colors; statistics and review ratings
 retain purple. Navigation hover uses an underline without changing color.
 The visible slideshow pause control was removed at the user’s request; preview
 rotation still respects reduced motion and stops on hover or keyboard focus.
+The sidebar divider is shared across all pages, switching to a horizontal rule
+on stacked layouts. Case-study headings use the full hero width with smaller
+side gutters than the body text. A white “All work” pill stays near the top of
+the viewport while scrolling through the case study, beyond the hero.
 
 ## Profile and project sources
 

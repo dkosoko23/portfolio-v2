@@ -1,5 +1,26 @@
 # Validation
 
+## Shared divider and floating case-study navigation — October 6, 2026
+
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- Browser checks are available again. At 1280×720, the homepage sidebar has
+  a 1px divider aligned with the main column, and all six cards render.
+- The provider case-study heading spans approximately 894px versus 830px for
+  body text at that viewport. Its side gutters are approximately 26px.
+- The white, rounded “All work” link uses Tailwind `shadow-xl`. After scrolling
+  720px, the hero bottom is above the viewport and the pill remains at 24px,
+  with the link still receiving pointer input. Clicking it returns to `/#work`.
+- At 390×844, the divider becomes a horizontal line below the sidebar. After
+  scrolling past the hero, the pill remains at 16px and receives pointer input.
+  Neither tested viewport has horizontal document overflow.
+- No captured browser warnings or errors. The temporary mobile viewport was
+  reset and the desktop preview returned to the top of the case study.
+- Screenshots are saved under ignored `.data/verification/`:
+  `wide-hero-desktop.png`, `floating-back-scrolled.png`,
+  `home-sidebar-divider.png`, and `floating-back-mobile.png`.
+- Reapplied the previously requested “Areas” line removal, which was missing
+  from the current `main` checkout. No deployment was performed.
+
 ## Sidebar, dates, and skills refinement — October 6, 2026
 
 - `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
