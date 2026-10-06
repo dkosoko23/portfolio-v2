@@ -1,5 +1,18 @@
 # Validation
 
+## Back pill and header spacing — October 6, 2026
+
+- `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.
+- At 1280×720, the case-study header and back link have a 38.4px side gutter,
+  increased from 25.6px. At 390×844, the gutter is 24px. Neither viewport has
+  horizontal document overflow.
+- The back pill has a 0px border. A real pointer hover changes its background
+  to `#110c1c` and text to white, with no underline. Its default white
+  background, dark text, and `shadow-xl` remain.
+- No captured browser warnings or errors. The viewport override was reset.
+- Hover screenshot: ignored `.data/verification/back-pill-hover.png`.
+- No deployment was performed.
+
 ## Shared divider and floating case-study navigation — October 6, 2026
 
 - `bun run typecheck`, `bun run generate`, and `git diff --check`: passed.

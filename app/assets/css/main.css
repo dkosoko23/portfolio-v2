@@ -68,10 +68,10 @@ a { text-decoration: none; }
 .back-link { display: inline-flex; align-items: center; gap: 8px; color: #5c5965; font-size: 12.5px; margin-bottom: 48px; }
 .section-rule { padding-top: 28px; border-top: 1px solid #dbdadf; margin-top: 40px; }
 .detail-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px 0; margin: 32px 0; border-top: 1px solid #dbdadf; border-bottom: 1px solid #dbdadf; }
-.reading.case-study { --case-study-gutter: clamp(20px, 2vw, 36px); padding: 0; }
+.reading.case-study { --case-study-gutter: clamp(24px, 3vw, 56px); padding: 0; }
 .case-study-back { position: sticky; top: 24px; z-index: 20; height: 0; padding-inline: var(--case-study-gutter); pointer-events: none; }
-.case-study-back-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 18px; border: 1px solid #dbdadf; border-radius: 999px; background: #ffffff; color: #110c1c; font-size: 13px; font-weight: 500; pointer-events: auto; }
-.case-study-back-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.case-study-back-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 18px; border: 0; border-radius: 999px; background: #ffffff; color: #110c1c; font-size: 13px; font-weight: 500; pointer-events: auto; transition: background-color .16s, color .16s; }
+.case-study-back-link:hover { background: #110c1c; color: #ffffff; text-decoration: none; }
 .case-study-hero { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(460px, 72svh, 800px); padding: 112px var(--case-study-gutter) clamp(32px, 4.5vw, 72px); overflow: hidden; background: #110c1c; }
 .case-study-hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .case-study-hero::after { position: absolute; inset: 0; z-index: -1; content: ''; background: linear-gradient(180deg, #110c1c70 0%, #110c1c10 25%, #110c1c80 60%, #110c1ce8 100%); }
