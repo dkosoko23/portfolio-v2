@@ -1,5 +1,27 @@
 # Validation
 
+## Image-led case studies and white theme — October 6, 2026
+
+- `bun run typecheck` and `bun run generate`: passed. The same unused-import
+  warning from Nuxt’s internal `h3.mjs` dependency remains.
+- All nine generated pages have titles, descriptions, valid local links, and
+  existing image files.
+- All six case studies render an image-backed hero and 19 total technical
+  sections, each with text followed by its assigned images. All 38 original
+  screenshots occur exactly once in the section galleries. Their enlarge
+  buttons and the native dialog remain in the rendered markup.
+- The local provider-platform route returned HTTP 200 with its hero and four
+  interleaved sections.
+- Source checks confirm `object-fit: cover` and `object-position: center top`
+  for card and hero images, white page surfaces, and no hover color overrides.
+- `output/zelohub-transparent.png` has an RGBA channel with transparent and
+  opaque pixels. The generated image is a separate export with known text and
+  edge-fidelity limitations documented alongside it.
+- Fresh browser geometry, responsive behavior, and interaction checks remain
+  unavailable because the browser connection fails on a missing cached service
+  module. Static checks do not establish visual or interaction correctness.
+- No deployment was performed.
+
 ## Full-stack case studies — October 6, 2026
 
 - `bun run typecheck`: passed.

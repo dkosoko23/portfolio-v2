@@ -56,7 +56,6 @@ onBeforeUnmount(() => {
     <NuxtLink :to="`/projects/${project.slug}`" class="project-link" :aria-label="`View ${project.title}`">
       <div class="project-drift">
         <div v-for="(image, index) in project.preview" :key="image.src" class="image-layer" :class="{ 'is-active': index === activeIndex }" :aria-hidden="index !== activeIndex">
-          <img class="image-mat" :src="image.src" alt="" :loading="priority && index === 0 ? 'eager' : 'lazy'" aria-hidden="true">
           <img class="image-shot" :src="image.src" :alt="image.alt" :width="image.width" :height="image.height" :loading="priority && index === 0 ? 'eager' : 'lazy'" :fetchpriority="priority && index === 0 ? 'high' : 'auto'">
         </div>
       </div>

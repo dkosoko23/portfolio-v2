@@ -23,7 +23,7 @@ const year = new Date().getFullYear();
             </ul>
 
             <nav class="nav-links" aria-label="Main navigation">
-              <NuxtLink to="/#work" :aria-current="route.path === '/' ? 'page' : undefined"><SmallIcon name="work" />Work</NuxtLink>
+              <NuxtLink to="/#work" :aria-current="route.path === '/' || route.path.startsWith('/projects/') ? 'page' : undefined"><SmallIcon name="work" />Work</NuxtLink>
               <NuxtLink to="/about" :aria-current="route.path === '/about' ? 'page' : undefined"><SmallIcon name="about" />About</NuxtLink>
               <NuxtLink to="/reviews" :aria-current="route.path === '/reviews' ? 'page' : undefined"><SmallIcon name="reviews" />Client Words</NuxtLink>
               <a :href="profile.upwork" class="contact-link" target="_blank" rel="noopener noreferrer"><SmallIcon name="mail" />Reach Out<span class="sr-only"> on Upwork (opens in a new tab)</span></a>

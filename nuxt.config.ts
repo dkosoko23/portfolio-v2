@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       title: 'Adebowale O. | Full-Stack Developer · SaaS & Web Apps',
       meta: [
         { name: 'description', content: 'Full-stack development by Adebowale O. Explore web applications, APIs, PostgreSQL/PostGIS search, payment integrations, and responsive frontends.' },
-        { name: 'theme-color', content: '#f8f6f0' },
+        { name: 'theme-color', content: '#ffffff' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     },

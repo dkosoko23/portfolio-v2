@@ -18,6 +18,7 @@ export interface Project {
   technicalSections: {
     title: string;
     paragraphs: string[];
+    imageIndices: number[];
   }[];
   skills: string[];
   source: string;
@@ -64,6 +65,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'Conversation state and patient context',
+        imageIndices: [1, 2, 3, 4],
         paragraphs: [
           'The messaging workspace combines a conversation list, an active conversation, and a patient profile. Each region has its own responsibility, but all three need to agree on the selected person and conversation.',
           'That relationship is the central engineering concern: selecting a conversation changes the message context and the supporting profile together. Treating those as coordinated views of the same workflow helps avoid a screen that displays the right messages beside the wrong patient information.',
@@ -71,6 +73,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Reusable application structure',
+        imageIndices: [0, 9, 10],
         paragraphs: [
           'Persistent navigation separates messages, voice calls, tools, settings, and account controls. Inside the workspace, conversation rows, contact information, tags, and message actions form recurring interface patterns.',
           'These patterns provide clear component boundaries: application navigation, list items, workspace content, and contextual details. The technical value is a structure that can accommodate different communication tasks without duplicating the entire interface for each one.',
@@ -78,6 +81,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Workflow boundaries and integration concerns',
+        imageIndices: [5, 6, 7, 8],
         paragraphs: [
           'Patient context includes contact information, consent indicators, tags, and an EMR entry point. These controls describe different responsibilities: identifying the person, understanding their communication context, and moving into a related clinical workflow.',
           'These workflows call for clear separation between the application UI and the services behind it. A conversation view handles selection and composition; a messaging service handles delivery; access to patient information requires server-side authorization. Keeping those responsibilities separate makes integration failures and permission constraints easier to represent in the interface.',
@@ -101,6 +105,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'Frontend, API, and database ownership',
+        imageIndices: [0, 2],
         paragraphs: [
           'I implemented the Vue/Nuxt frontend, Node.js backend, APIs, and PostgreSQL database architecture. The application spans provider and organization discovery, detailed profiles, reviews, and responsive interfaces.',
           'That scope required thinking beyond individual screens. A provider can appear in a search result, on a map, and on a profile page; those surfaces need a consistent representation of the provider and their locations. Working across the stack let me connect the interface requirements directly to the API and database work.',
@@ -108,6 +113,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Geospatial search with PostgreSQL and PostGIS',
+        imageIndices: [1],
         paragraphs: [
           'I built geospatial search with PostgreSQL and PostGIS so discovery could account for location alongside the other search criteria. Location is part of finding a relevant provider, rather than a separate map added after the results.',
           'The interface combines location input, provider results, and a map. The engineering problem is to preserve the relationship between a provider, their practice locations, and the geographic area the user is searching.',
@@ -115,6 +121,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Fuzzy matching, filtering, and provider ranking',
+        imageIndices: [4],
         paragraphs: [
           'I implemented fuzzy name matching, advanced filtering, and provider ranking. These address different parts of discovery: approximate names help users find a record, filters narrow the eligible results, and ranking determines their order.',
           'A useful search experience has to balance those concerns. An approximate name match is not the same thing as a relevant provider, so the product also exposes structured criteria and profile information that help users evaluate the result.',
@@ -122,6 +129,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Connected application workflows',
+        imageIndices: [3, 5, 6, 7],
         paragraphs: [
           'The frontend covers provider search, provider profiles, a universal search modal, organization pages, a provider feed, and mobile layouts. I worked on the application as a connected set of workflows, including the transition from discovering a provider to inspecting their details.',
           'The project demonstrates full-stack ownership through concrete features: database-backed discovery, API integration, location-aware results, and an interface that makes those capabilities usable.',
@@ -145,6 +153,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'Content structure and care navigation',
+        imageIndices: [0, 2],
         paragraphs: [
           'The site separates conditions, patient resources, insurance information, and appointment access. Care categories such as hip, spine, knee, shoulder, and foot and ankle give patients a route into the relevant content.',
           'From an engineering perspective, that hierarchy defines the page and navigation model. A care category, an informational page, and an appointment action serve different purposes and should remain understandable as the site grows.',
@@ -152,6 +161,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Reusable page composition',
+        imageIndices: [1, 4],
         paragraphs: [
           'Care selection, service information, testimonials, provider information, and calls to action recur across the website. Each has a distinct content shape and layout responsibility, giving the frontend clear component boundaries.',
           'The implementation concern is to keep content and layout responsibilities separate: the same section structure should support different care content without forcing every page into a single inflexible template.',
@@ -159,6 +169,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Appointment and contact entry points',
+        imageIndices: [3],
         paragraphs: [
           'Appointment, telephone, and contact controls connect informational browsing to a next action. They need to be discoverable within the content hierarchy and usable when the page is viewed on a smaller screen.',
           'An appointment entry point is also a system boundary. The public website can direct a patient toward scheduling, while appointment availability, booking confirmation, and clinical records belong to the scheduling system behind it.',
@@ -182,6 +193,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'Service pages as a repeatable system',
+        imageIndices: [1],
         paragraphs: [
           'Cloud security, cloud migration, cost optimization, and cloud engineering require different explanations, but share a common page structure. The portfolio shows service introductions, supporting information, platform references, and contact prompts.',
           'The engineering challenge is reuse without losing the differences between services. A shared section structure can keep layout behavior consistent while allowing each page to carry its own content and supporting imagery.',
@@ -189,6 +201,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Responsive layout and content hierarchy',
+        imageIndices: [2],
         paragraphs: [
           'The desktop and mobile screens preserve the service narrative while changing the arrangement of navigation, text, and imagery. The smaller layout has to maintain reading order and keep the inquiry action within reach.',
           'This is a frontend composition problem: establish the order in the document, let sections adapt to available width, and avoid tying essential information to a desktop-only arrangement.',
@@ -196,6 +209,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Service discovery and inquiry workflows',
+        imageIndices: [0, 3],
         paragraphs: [
           'The site moves visitors from a service overview toward an inquiry. Its technical responsibility is to present the right service context and make that next step clear across the public pages.',
           'A service page needs to work as a direct entry point as well as part of the main navigation. Its introduction establishes context, the supporting sections explain the offering, and the inquiry prompt provides a next step. Shared navigation and footer structures connect those standalone pages back to the wider site.',
@@ -220,6 +234,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'Destination content and navigation',
+        imageIndices: [0, 2],
         paragraphs: [
           'The website includes a landing experience, destination information, about content, and an application form. Those surfaces represent a progression from exploration to a concrete request.',
           'The engineering concern is to give destination content a consistent structure and make the application path discoverable from relevant pages. That structure helps keep the experience coherent as destinations or supporting information change.',
@@ -227,6 +242,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Application forms as a product workflow',
+        imageIndices: [4],
         paragraphs: [
           'The application interface turns interest into information the service can act on. Field grouping, labels, instructions, and the next action all contribute to whether a visitor understands what to provide.',
           'Form handling involves several distinct states: entering information, correcting invalid fields, submitting, and receiving a response. The frontend needs to preserve the applicant’s input when a request fails, while the receiving service needs to validate the submitted data independently. Separating these responsibilities gives the workflow clear success and recovery paths.',
@@ -234,6 +250,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Responsive composition and reusable sections',
+        imageIndices: [1, 3],
         paragraphs: [
           'Destination content, statistics, guidance, and application prompts recur throughout the screens. A component-based approach lets those sections share layout behavior while presenting different information.',
           'The smaller-screen experience needs to preserve the reading sequence and form usability. Content can stack vertically, but labels, instructions, and application actions must retain their relationship. The technical aim is to support the complete journey on a phone, from destination research through the application interface.',
@@ -258,6 +275,7 @@ export const projects: Project[] = [
     technicalSections: [
       {
         title: 'From product discovery to checkout',
+        imageIndices: [0, 2],
         paragraphs: [
           'The site connects landing pages and book pages to a checkout flow. Those pages have different responsibilities: the landing page introduces the author and catalog, the book page gives the buyer product context, and checkout collects the information needed to continue the purchase.',
           'I handled both the website implementation and the purchase interface. The portfolio includes the landing page, a tablet book page, and a mobile checkout form, showing the same commerce journey across multiple screen sizes.',
@@ -265,6 +283,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Paystack payment integration',
+        imageIndices: [3],
         paragraphs: [
           'I integrated Paystack into the purchase flow so buyers could move from the storefront into payment. This made the project a commerce application with a third-party integration, rather than a catalog of static book pages.',
           'The important application boundary is the handoff between the site’s checkout and the payment provider. Product selection and checkout context need to remain understandable to the buyer as they move into that external payment step.',
@@ -272,6 +291,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Responsive product and form interfaces',
+        imageIndices: [1, 4],
         paragraphs: [
           'I implemented layouts for desktop, tablet, and mobile, including the checkout form. The narrower experience still needs to make the selected book, required information, and next action clear without the space available on a desktop page.',
           'This work combines frontend implementation with an external payment integration: the product pages establish what is being purchased, while the checkout carries the user through the transaction journey.',

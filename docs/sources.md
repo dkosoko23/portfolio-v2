@@ -7,10 +7,18 @@ Inspected on October 2, 2026.
 https://www.reidhslaughter.com/#work
 
 Reimplemented the visual layout in Nuxt and Tailwind: 25vw desktop sidebar with a
-280px minimum, 30px sidebar horizontal padding, Inter typography, warm neutral
-surfaces, 14px work grid spacing, 16:9.6 project cards, blurred image backdrops,
+280px minimum, 30px sidebar horizontal padding, Inter typography,
+14px work grid spacing, 16:9.6 project cards,
 caption overlays, gentle image rotation, and a 900px stacked-layout breakpoint.
 Reid’s identity, imagery, text, metrics, and contact details are not included.
+
+On October 6, the user requested full-card images with top-aligned cropping,
+image-backed case-study headers, and screenshots mixed into the text. Card
+padding and blurred backdrops were removed. All 38 original project images are
+assigned to the technical sections they illustrate and retain the image viewer.
+The user also requested white surfaces with purple as a persistent accent,
+instead of a color change on hover. Active navigation, metrics, reviews, and
+the contact action use purple; navigation hover uses an underline.
 
 ## Profile and project sources
 
